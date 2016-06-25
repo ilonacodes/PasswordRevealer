@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Revealer</title>
+    <script src="./src/PasswordRevealer.js"></script>
+</head>
+<body>
+<input type="password" size="25" id="password" />
+<input type="button" onclick="passwordRevealer.toggle();" value="Reveal" id="password_revealer_toggle_button" />
+
+<script>
+    var passwordController = new PasswordController()
+    var revealController = new RevealController()
+    window.passwordRevealer = new PasswordRevealer(passwordController, revealController)
+</script>
+</body>
+</html>
